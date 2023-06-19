@@ -58,7 +58,7 @@ def main():
     object_uri_list = add_data_in_dict(object_uri_list)
 
     object_uri_text = dict_to_csv(object_uri_list)
-    f = open("uri_list/object_uri_list2.csv", "w")
+    f = open("uri_list/object_uri_list.csv", "w")
     f.write(object_uri_text)
     f.close()
 

@@ -444,23 +444,23 @@ def merge_ttl(files):
 if __name__ == "__main__":
     # ### making ttl file from csv created above
     ttl_ReferenceInteraction()  
-    #     # requires lectin_list.csv, lectin_agent.csv, lectin_affect.csv, lectin_ligand.csv, lectin_pubmed.csv, structure_ligand.csv, ligand_names.csv
+    # requires lectin_list.csv, lectin_agent.csv, lectin_affect.csv, lectin_ligand.csv, lectin_pubmed.csv, structure_ligand.csv, ligand_names.csv
     ttl_pubmed()                
-    #     # requires lectin_pubmed.csv
+    # requires lectin_pubmed.csv
     ttl_structure()             
-    #     # requires structure_ligand.csv
+    # requires structure_ligand.csv
     ttl_ligand()                
-    #     # requires lectin_ligand.csv, ligand_names.csv, structure_ligand.csv
+    # requires lectin_ligand.csv, ligand_names.csv, structure_ligand.csv
     ttl_lectin()                
-    #     # requires lectin_list.csv
+    # requires lectin_list.csv
     ttl_area()                  
-    #     # requires area_list.csv
+    # requires area_list.csv
     ttl_agent()                 
-    #     # requires agent_list.csv, agent_disease.csv, agent_affected_area.csv
+    # requires agent_list.csv, agent_disease.csv, agent_affected_area.csv
     ttl_disease()               
-    #     # requires agent_disease.csv, area_disease.csv, disease_list.csv
+    # requires agent_disease.csv, area_disease.csv, disease_list.csv
 
-    # merge_ttl(['agent', 'area', 'disease', 'lectin', 'ligand', 'pubmed', 'referenced_interaction', 'structure'])
     # passing string arguments which corresponds to the file name stored in the turtle folder
+    merge_ttl(['agent', 'area', 'disease', 'lectin', 'ligand', 'pubmed', 'referenced_interaction', 'structure'])
 
 

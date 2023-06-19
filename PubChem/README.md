@@ -1,6 +1,6 @@
-# glycovid_PubChem
+# PubChem
 ## RDF schema
-![RDF schema](img/schema.jpg)
+![RDF schema](img/schema.png)
 
 ## System overview
 - Scrape PubChem web resources in `https://pubchem.ncbi.nlm.nih.gov/#query=covid-19`

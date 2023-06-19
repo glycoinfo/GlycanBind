@@ -144,7 +144,7 @@ def create_ttl(dir_name, file_name, service):
     # object
     db_list = dict()
     # key = dbname, value = uriの辞書を作成
-    with open("uri_list/object_uri_list2.csv") as f1:
+    with open("uri_list/object_uri_list.csv") as f1:
         reader = csv.reader(f1, delimiter="\t")
         for row in reader:
             db_list[row[0]] = rdflib.Namespace(row[1])

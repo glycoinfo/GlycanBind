@@ -6,22 +6,7 @@ import pandas as pd
 import sys
 
 link_header = 'https://sugarbind.expasy.org'
-# def agent_list():
-#     target_link = link_header + '/agents?n=407'                                                                             # set scraping target link
-#     file = open('data/agent_list.csv', 'w')                                                                                # open file named "agent_list.csv" in "data" folder
-#     writer = csv.writer(file)                                                                                               # set csv writer
-#     writer.writerow(['Agent ID','Agent Name'])                                                                              # describe header title
-#     html = requests.get(target_link)                                                                                        # get html via request
-#     soup = BeautifulSoup(html.content, "html.parser")                                                                       # get html content as Beautiful Soup object
-#     tr_elements = soup.find('tbody').find_all('tr')                                                                         # find_all 'tr' elements from got html content
-#     for tr in tr_elements:
-#         a_tag_element = tr.find_all('td')[0].find('a')                                                                      # find a tag element in a tr element
-#         agent_id = a_tag_element.get('href')[8:]                                                                            # extracting agent id
-#         agent_name = a_tag_element.get_text()                                                                               # extracting agent name
-#         writer.writerow([agent_id, agent_name])                                                                             # inserting extracted agent id and agent name
-#     file.close()                                                                                                            # close file
-
-def agent_list_2():
+def agent_list():
     target_link = link_header + '/agents?n=407'
     file = open('data/agent_list2.csv', 'w')
     writer = csv.writer(file)
@@ -377,29 +362,28 @@ def agent_area():
 
 
 if __name__ == "__main__":
-    # agent_list_2()
-    # ### scraping from sugarbind ( https://sugarbind.expasy.org )
-    # # agent_list()
-    #     # creating agent_list.csv
-    # lectin_list()
-    #     # creating lectin_list.csv
-    # disease_list()
-    #     # creating disease_list.csv
+    ### scraping from sugarbind ( https://sugarbind.expasy.org )
+    agent_list()
+    # creating agent_list.csv
+    lectin_list()
+    # creating lectin_list.csv
+    disease_list()
+    # creating disease_list.csv
     area_list()
-    #     # creating area_list.csv
-    # lectin_pubmed()
-    #     # creating lectin_pubmed.csv
-    # lectin_ligand()
-    #     # creating lectin_ligand.csv
-    # structure_ligand()
-    #     # creating ligand_names.csv, structure_ligand
-    # area_disease()
-    #     # creating area_disease.csv
-    # agent_area()
-    #     # creating agent_affected_area.csv
-    # agent_disease()
-    #     # creating agent_disease.csv
-    # lectin_area()
-    #     # creating lectin_area.csv
-    # lectin_agent()
-    #     # creating lectin_agent.csv
+    # creating area_list.csv
+    lectin_pubmed()
+    # creating lectin_pubmed.csv
+    lectin_ligand()
+    # creating lectin_ligand.csv
+    structure_ligand()
+    # creating ligand_names.csv, structure_ligand
+    area_disease()
+    # creating area_disease.csv
+    agent_area()
+    # creating agent_affected_area.csv
+    agent_disease()
+    # creating agent_disease.csv
+    lectin_area()
+    # creating lectin_area.csv
+    lectin_agent()
+    # creating lectin_agent.csv
