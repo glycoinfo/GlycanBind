@@ -1,5 +1,5 @@
-# GlycanBind
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8058171.svg)](https://doi.org/10.5281/zenodo.8058171)
+# GlycanBind
 This repository is related to GlycanBind project, which aims to integrate glycan-binding information related to pathogens, including SARS-CoV-2.
 
 # Scripts to RDFization from databases.
