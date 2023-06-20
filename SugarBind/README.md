@@ -3,8 +3,10 @@
 ![RDF schema](/resources/img/schema.jpg)
 
 ## How to use
-
+- Python 3.10.9
 ``` bash
+# Install dependencies
+pip install -r requirements.txt
 # Scrape data with chromedriver
 python create_ttl.py
 # Create ttl file from scraped csv files

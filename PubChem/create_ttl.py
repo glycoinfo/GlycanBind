@@ -1,5 +1,5 @@
 from source.utils import uri_ref, expansion_tsv_row
-from rdflib import Graph, Literal, Namespace, URIRef, BNode
+from rdflib import Graph
 from copy import copy
 from source import (
     ttl_bioactivity_gene_s,
@@ -16,7 +16,6 @@ from source import (
     ttl_rhea_s,
 )
 import csv
-import json
 import glob
 
 def serialize(g, data_name):

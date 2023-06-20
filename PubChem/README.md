@@ -7,11 +7,11 @@
 - Currently, it is proposed that RDF data created using this plugin on July 22, 2022 can be accessed from [GlyCosmos endpoint](https://ts.glycosmos.org/sparql) using the graph name `http://rdf.glycosmos.org/glycovid_ pubchem` using SPARQL.
 - By using this program to perform scraping and RDFization, the latest PubChem data can be updated with only the differences. If you want to create RDF data from scratch, you can do so by deleting all csv files in the `datalist_csv` directory.
 
-## Requirements
-- pyhton 3.9.14
-
 ## How to use
+- Python 3.10.9
 ``` bash
+# Install dependencies
+pip install -r requirements.txt
 # Scrape data by chromedriver
 python rdf.py
 # Create ttl file from scraped csv files

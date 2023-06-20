@@ -1,19 +1,11 @@
-import collections
 import time
-from tqdm import tqdm
-import itertools as itr
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import traceback
-from selenium.webdriver.chrome.options import Options
 import pandas as pd
-import re
 import glob
 import shutil
 import os
-import copy
-import sys
-import pathlib
 import datetime
 
 

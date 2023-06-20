@@ -4,7 +4,6 @@ import os
 import re
 import shutil
 import sys
-from copy import copy
 from urllib.parse import quote
 
 import rdflib

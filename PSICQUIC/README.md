@@ -3,8 +3,10 @@
 ![RDF schema](/img/schema.png)
 
 ## How to use
-
+- Python 3.10.9
 ``` bash
+# Install dependencies
+pip install -r requirements.txt
 # query psicquic data by rest api
 python query_all.py
 # exppantion tsv by "|"
