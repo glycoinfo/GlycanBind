@@ -5,6 +5,7 @@ import re
 import shutil
 import sys
 from copy import copy
+import os
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "../"))
 
@@ -89,6 +90,10 @@ def expansion_tsv(dirname):
     services_list = gm.list_serveice()
     in_dir = "data/"
     out_dir = "expdata/"
+    try:
+        os.mkdir("expdata")
+    except:
+        pass
     for service in services_list:
         try:
             shutil.rmtree(dirname + out_dir + service)

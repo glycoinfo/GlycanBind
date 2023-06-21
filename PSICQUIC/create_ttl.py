@@ -281,7 +281,7 @@ def main(dir_name: str):
         except:
             pass
         try:
-            os.mkdir("turtle/" + service)
+            os.makedirs("turtle/" + service)
         except:
             pass
         dir_list = glob.glob(dir_name + service + "/*.tsv", recursive=True)

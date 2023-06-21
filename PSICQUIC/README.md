@@ -8,6 +8,7 @@
 # Install dependencies
 pip install -r requirements.txt
 # query psicquic data by rest api
+# This process needs log time(over 30h)
 python query_all.py
 # exppantion tsv by "|"
 python mylib/expansion_tsv.py
