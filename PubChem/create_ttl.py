@@ -17,15 +17,20 @@ from source import (
 )
 import csv
 import glob
+import os
 
 def serialize(g, data_name):
     g.serialize(
-        destination=f"PubChem/turtle/{data_name}.ttl",
+        destination=f"turtle/{data_name}.ttl",
         format="turtle",
     )
 
 
 def create_ttl():
+    try:
+        os.mkdir("turtle")
+    except:
+        pass
     func_set = {
         "bioactivity_gene": ttl_bioactivity_gene_s.create_ttl,
         "bioassay": ttl_bioassay_s.create_ttl,
@@ -48,7 +53,7 @@ def create_ttl():
 
         # Read csv file of all data/dir/**/.csv
         list_csv_file_path = glob.glob(
-            f"PubChem/data/dir/{data_name}/*.csv", recursive=True
+            f"data/dir/{data_name}/*.csv", recursive=True
         )
         for csv_file_path in list_csv_file_path:
             with open(csv_file_path, encoding='utf-8-sig') as f1:

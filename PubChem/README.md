@@ -9,10 +9,12 @@
 
 ## How to use
 - Python 3.10.9
+- Google Chrome 114
 ``` bash
 # Install dependencies
 pip install -r requirements.txt
 # Scrape data by chromedriver
+# This process needs log time(over 30h)
 python rdf.py
 # Create ttl file from scraped csv files
 python create_ttl.py
