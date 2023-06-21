@@ -7,8 +7,9 @@
 ``` bash
 # Install dependencies
 pip install -r requirements.txt
-# Scrape data with chromedriver
-python create_ttl.py
+# Scrape data with BeautifulSoup
+# This process needs log time (over 2h)
+python scraping.py
 # Create ttl file from scraped csv files
 python create_ttl.py
 # Create ShEx files of created RDF file by sheXer.

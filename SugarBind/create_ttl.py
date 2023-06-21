@@ -318,7 +318,7 @@ import numpy
 
 def ttl_agent():
     # df_agent_list = pd.read_csv('data/agent_list.csv').sort_values(by = 'Agent ID', ascending = True)
-    df_agent_list = pd.read_csv('data/agent_list2.csv').sort_values(by = 'Agent ID', ascending = True)
+    df_agent_list = pd.read_csv('data/agent_list.csv').sort_values(by = 'Agent ID', ascending = True)
     df_agent_disease = pd.read_csv('data/agent_disease.csv').sort_values(by = 'Agent ID', ascending = True)
     df_agent_area = pd.read_csv('data/agent_affected_area.csv').sort_values(by = 'Agent ID', ascending = True)
 

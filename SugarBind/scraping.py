@@ -7,8 +7,9 @@ import sys
 
 link_header = 'https://sugarbind.expasy.org'
 def agent_list():
+    print("GET: agents")
     target_link = link_header + '/agents?n=407'
-    file = open('data/agent_list2.csv', 'w')
+    file = open('data/agent_list.csv', 'w')
     writer = csv.writer(file)
     writer.writerow(['Agent ID', 'Agent Name', 'Agent Type', 'taxonomy ID', 'taxonomy level', 'Lineage', 'Agent properties', 'HAMAP', 'Viralzone', 'Viralzone Link', 'GOLD'])
     list_html = requests.get(target_link)
@@ -44,7 +45,7 @@ def agent_list():
             hamap = info[4].find('p').get_text() if info[4].find('p') else None
             viralzone = info[5].find('p').get_text() if info[5].find('p') else None
             if viralzone:
-                print(info[5].find('p').find('a'))
+                # print(info[5].find('p').find('a'))
                 viralzone_link = info[5].find('p').find('a').get('href')
 
             else:
@@ -73,6 +74,7 @@ def agent_list():
     file.close()
 
 def lectin_list():
+    print("GET: lections")
     target_link = link_header + '/lectins?n=739'                                                                            # set scraping target link
     file = open('data/lectin_list.csv', 'w')                                                                               # open file named "lectin_list.csv" in "data" folder
     writer = csv.writer(file)                                                                                               # set csv writer
@@ -107,6 +109,7 @@ def lectin_list():
     file.close()                                                                                                            # close file
 
 def disease_list():
+    print("GET: diseases")
     target_link = link_header + '/diseases'                                                                                 # set scraping target link
     file = open('data/disease_list.csv', 'w')                                                                              # open file named "disease_list.csv" in "data" folder
     writer = csv.writer(file)                                                                                               # set csv writer
@@ -129,6 +132,7 @@ def disease_list():
     file.close()                                                                                                            # close file
 
 def area_list():
+    print("GET: area")
     target_link = link_header + '/affectedAreas'                                                                        # set scraping target link
     file = open('data/area_list.csv', 'w')                                                                                 # open file named "area_list.csv" in "data" folder
     writer = csv.writer(file)                                                                                               # set csv writer
@@ -158,6 +162,7 @@ def area_list():
     file.close()                                                                                                            # file close
 
 def lectin_pubmed():
+    print("GET: lections")
     file = open('data/lectin_pubmed.csv', 'w')                                                                             # open file named "lectin_pubmed.csv" in "data" folder
     writer = csv.writer(file)                                                                                               # set csv writer
     writer.writerow(['Lectin ID', 'Pubmed ID','Pubmed link', 'Pubmed Year', 'Pubmed Authors', 'Pubmed Title'])              # describe header title
@@ -188,6 +193,7 @@ def lectin_pubmed():
     file.close                                                                                                              # file close
 
 def lectin_ligand():
+    print("GET: lection ligans")
     file = open('data/lectin_ligand.csv', 'w')                                                                             # open file named "lectin_ligand.csv" in "data" folder
     writer = csv.writer(file)                                                                                               # set csv writer
     writer.writerow(['Lectin ID', 'Ligand ID'])                                                                             # describe header title
@@ -203,6 +209,7 @@ def lectin_ligand():
     file.close()                                                                                                            # file close
 
 def ligand_glycoconjugate():
+    print("GET: ligand Glycoconjugate")
     file = open('data/ligand_glycoconjugate.csv', 'w')
     writer = csv.writer(file)
     writer.writerow(['Liogand ID', 'Glycoconjugate URL', 'Glycoconjugate Name'])
@@ -225,6 +232,7 @@ def ligand_glycoconjugate():
     
 
 def lectin_agent():
+    print("GET: lectin agent")
     file = open('data/lectin_agent.csv', 'w')                                                                              # open file named "lectin_ligand.csv" in "data" folder
     writer = csv.writer(file)                                                                                               # set csv writer
     writer.writerow(['Lectin ID', 'Agent ID'])                                                                              # describe header title
@@ -240,6 +248,7 @@ def lectin_agent():
     file.close()                                                                                                            # file close
 
 def lectin_area():
+    print("GET: lectin area")
     file = open('data/lectin_affect.csv', 'w')                                                                             # open file named "lectin_affect.csv" in "data" folder
     writer = csv.writer(file)                                                                                               # set csv writer
     writer.writerow(['Lectin ID', 'Affect ID'])                                                                             # describe header title
@@ -255,6 +264,7 @@ def lectin_area():
     file.close()                                                                                                            # file close
 
 def structure_ligand():
+    print("GET: structure ligand")
     target_link = link_header + '/ligands?n=204'                                                                            # set scraping target link
     file = open('data/ligand_names.csv', 'w')                                                                              # open file named "ligand_names.csv" in "data" folder
     writer = csv.writer(file)                                                                                               # set csv writer
@@ -296,6 +306,7 @@ def structure_ligand():
     file.close()                                                                                                            # file close
 
 def agent_disease():
+    print("GET: agent disease")
     target_link = link_header + '/agents?n=407'                                                                             # set scraping target link
     file = open('data/agent_disease.csv', 'w')                                                                             # open file named "agent_disease.csv" in "data" folder
     writer = csv.writer(file)                                                                                               # set csv writer
@@ -317,6 +328,7 @@ def agent_disease():
     file.close()                                                                                                            # file close
 
 def area_disease():
+    print("GET: area disease")
     target_link = link_header + '/affectedAreaTypes'                                                                        # set scraping target link
     file = open('data/area_disease.csv', 'w')                                                                              # open file named "area_disease.csv" in "data" folder
     writer = csv.writer(file)                                                                                               # set csv writer
