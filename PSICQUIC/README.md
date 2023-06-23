@@ -1,6 +1,6 @@
 # PSIQUIC
 ## RDF schema
-![RDF schema](PSICQUIC/img/schema.png)
+![RDF schema](img/schema.png)
 
 ## How to use
 - Python 3.10.9
