@@ -36,7 +36,7 @@ PubChem
 ├── source                     # Souce code to scrape PubChem web page.
 ├── turtle                     # RDF files outputs by RDFization.
 ├── rdf.py                     # Python script to scrape PubChem web resources.
-└── create_ttl.py              # Create rdf files from scraped data in data/ directroy.
+└── create_ttl.py              # Create RDF files from scraped data in /data directory.
 ```
 
 ## Data overview
